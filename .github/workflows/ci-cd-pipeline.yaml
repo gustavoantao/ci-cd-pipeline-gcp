@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t ${{ env.APP_IMAGE_TAG }} src/
+          docker build -t ${{ env.APP_IMAGE_TAG }} -f docker/Dockefile src/
 
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
