@@ -8,4 +8,4 @@ WORKDIR /app
 
 EXPOSE 5000
 
-ENTRYPOINT [ "python3", "app.py" ]
+ENTRYPOINT [ "flask", "--app","app","run","--host=0.0.0.0"]
