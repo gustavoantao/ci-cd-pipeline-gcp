@@ -52,7 +52,7 @@ jobs:
         with:
           project_id: ${{ vars.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
-          
+
       - name: Deploy to CloudRun
         run: |
            gcloud run deploy my-python-app \
@@ -60,4 +60,5 @@ jobs:
             --project ${{ vars.GCP_PROJECT_ID }} \
             --platform managed \
             --region us-central1 \
+            --port=5000
             --allow-unauthenticated
