@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  APP_IMAGE_TAG: ${{ vars.GOOGLE_ARTIFACT_REGISTRY }}/app:${{ env.GITHUB_SHA }}
+  APP_IMAGE_TAG: ${{ vars.GOOGLE_ARTIFACT_REGISTRY }}/app:${{ github.sha }}
 
 jobs:
   build-and-push:
